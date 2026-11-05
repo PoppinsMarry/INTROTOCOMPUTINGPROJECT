@@ -94,6 +94,12 @@ a:hover{text-decoration:underline !important}
 
 <script>
 const DATA=[
+
+//n:"Cool Math Games",  c:"Entertainment",url:"https://www.coolmathgames.com/",
+            //Cool math games = sya yung name ng website 
+            //c:"Entertainment" sya category name 
+            //url:"https://www.coolmathgames.com/", link ng website nayon para napipindot 
+
     //ENTERTAINMENT
 {n:"Cool Math Games",c:"Entertainment",url:"https://www.coolmathgames.com/",r:["Asia","Europe","Americas"],chg:0,dur:600,pages:8.7,bounce:28.4,v:92.1,g:1.2,col:"#2f6fdb"},
 {n:"ASCII Flow",c:"Entertainment",url:"https://asciiflow.com/#/",r:["Americas","Europe"],chg:0,dur:1130,pages:11.5,bounce:23.6,v:71.4,g:3.8,col:"#c0392b"},
@@ -101,12 +107,34 @@ const DATA=[
 {n:"Bored Button",c:"Entertainment",url:"https://www.boredbutton.com/",r:["Europe","Americas"],chg:-1,dur:518,pages:12.5,bounce:33.4,v:49.8,g:2.1,col:"#b5368a"},
 {n:"Calculator Soup",c:"Entertainment",url:"https://www.calculatorsoup.com/",r:["Asia","Europe","Americas"],chg:2,dur:403,pages:4.8,bounce:24.9,v:46.3,g:14.6,col:"#1a8a6e"},
 
-
+//IT RELATED STUFF
 {n:"shortposts.example",c:"Social",r:["Americas"],chg:0,dur:805,pages:14.9,bounce:31.4,v:38.7,g:-2.4,col:"#333"},
 {n:"bazaar.example",c:"Shopping",r:["Asia","Europe"],chg:-1,dur:540,pages:9.2,bounce:34.0,v:35.5,g:5.3,col:"#d9822b"},
 {n:"newsdesk.example",c:"News",r:["Europe","Americas"],chg:1,dur:310,pages:3.1,bounce:52.7,v:29.0,g:-4.1,col:"#6b4c9a"},
 {n:"learnly.example",c:"Education",r:["Asia","Europe"],chg:3,dur:720,pages:6.4,bounce:38.2,v:24.6,g:9.7,col:"#0e7c7b"},
-{n:"mapquest.example",c:"Travel",r:["Europe","Asia","Americas"],chg:0,dur:285,pages:2.9,bounce:48.3,v:21.2,g:1.6,col:"#4a8f3c"}
+{n:"mapquest.example",c:"Travel",r:["Europe","Asia","Americas"],chg:0,dur:285,pages:2.9,bounce:48.3,v:21.2,g:1.6,col:"#4a8f3c"},
+
+//IT RELATED STUFF
+{n:"shortposts.example",c:"Social",r:["Americas"],chg:0,dur:805,pages:14.9,bounce:31.4,v:38.7,g:-2.4,col:"#333"},
+{n:"bazaar.example",c:"Shopping",r:["Asia","Europe"],chg:-1,dur:540,pages:9.2,bounce:34.0,v:35.5,g:5.3,col:"#d9822b"},
+{n:"newsdesk.example",c:"News",r:["Europe","Americas"],chg:1,dur:310,pages:3.1,bounce:52.7,v:29.0,g:-4.1,col:"#6b4c9a"},
+{n:"learnly.example",c:"Education",r:["Asia","Europe"],chg:3,dur:720,pages:6.4,bounce:38.2,v:24.6,g:9.7,col:"#0e7c7b"},
+{n:"mapquest.example",c:"Travel",r:["Europe","Asia","Americas"],chg:0,dur:285,pages:2.9,bounce:48.3,v:21.2,g:1.6,col:"#4a8f3c"},
+
+//IT RELATED STUFF
+{n:"shortposts.example",c:"Social",r:["Americas"],chg:0,dur:805,pages:14.9,bounce:31.4,v:38.7,g:-2.4,col:"#333"},
+{n:"bazaar.example",c:"Shopping",r:["Asia","Europe"],chg:-1,dur:540,pages:9.2,bounce:34.0,v:35.5,g:5.3,col:"#d9822b"},
+{n:"newsdesk.example",c:"News",r:["Europe","Americas"],chg:1,dur:310,pages:3.1,bounce:52.7,v:29.0,g:-4.1,col:"#6b4c9a"},
+{n:"learnly.example",c:"Education",r:["Asia","Europe"],chg:3,dur:720,pages:6.4,bounce:38.2,v:24.6,g:9.7,col:"#0e7c7b"},
+{n:"mapquest.example",c:"Travel",r:["Europe","Asia","Americas"],chg:0,dur:285,pages:2.9,bounce:48.3,v:21.2,g:1.6,col:"#4a8f3c"},
+
+//IT RELATED STUFF
+{n:"shortposts.example",c:"Social",r:["Americas"],chg:0,dur:805,pages:14.9,bounce:31.4,v:38.7,g:-2.4,col:"#333"},
+{n:"bazaar.example",c:"Shopping",r:["Asia","Europe"],chg:-1,dur:540,pages:9.2,bounce:34.0,v:35.5,g:5.3,col:"#d9822b"},
+{n:"newsdesk.example",c:"News",r:["Europe","Americas"],chg:1,dur:310,pages:3.1,bounce:52.7,v:29.0,g:-4.1,col:"#6b4c9a"},
+{n:"learnly.example",c:"Education",r:["Asia","Europe"],chg:3,dur:720,pages:6.4,bounce:38.2,v:24.6,g:9.7,col:"#0e7c7b"},
+{n:"mapquest.example",c:"Travel",r:["Europe","Asia","Americas"],chg:0,dur:285,pages:2.9,bounce:48.3,v:21.2,g:1.6,col:"#4a8f3c"},
+
 
 
 ].map((d,i)=>({...d,rank:i+1}));
