@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Top Sites Ranking</title>
+<style>
+:root{--bg:#f3f6f5;--card:#fff;--ink:#14282a;--mute:#5d7274;--line:#dbe5e3;--hero:#0e4a4c;--hero2:#16706f;--accent:#0e7c7b;--up:#12803f;--down:#c0392b;--chip:#e5f0ee;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1b1c;--card:#142729;--ink:#e6f1ef;--mute:#8fa9a8;--line:#244042;--hero:#0a3335;--hero2:#115856;--accent:#4fc3c0;--up:#4cd27f;--down:#ff7b6b;--chip:#1c3638}}
+:root[data-theme="dark"]{--bg:#0d1b1c;--card:#142729;--ink:#e6f1ef;--mute:#8fa9a8;--line:#244042;--hero:#0a3335;--hero2:#115856;--accent:#b213e2;--up:#4cd27f;--down:#ff7b6b;--chip:#1c3638}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Trebuchet MS","Segoe UI",system-ui,sans-serif}
+.hero{background:linear-gradient(120deg,var(--hero),var(--hero2));color:#fff;padding:28px 20px 40px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-20px;bottom:0;width:280px;height:120px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.12) 0 22px,transparent 22px 34px);clip-path:polygon(0 100%,0 70%,18% 70%,18% 45%,36% 45%,36% 60%,54% 60%,54% 25%,72% 25%,72% 50%,100% 50%,100% 100%);pointer-events:none}
+.wrap{max-width:1080px;margin:0 auto}
+.crumb{font-size:14px;opacity:.85}
+h1{margin:14px 0 6px;font-size:clamp(28px,5vw,44px);font-weight:600;letter-spacing:-.01em}
+.hero p{margin:0;max-width:520px;opacity:.9}
+.filters{display:flex;flex-wrap:wrap;gap:12px;margin:-22px auto 0;position:relative;z-index:2;padding:0 20px;max-width:1120px}
+select,.go{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:12px 18px;min-width:210px;flex:1 1 200px}
+.go{flex:0 0 auto;min-width:90px;background:var(--accent);color:#fff;border-color:var(--accent);cursor:pointer;font-weight:600}
+.go:hover{filter:brightness(1.1)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+main{max-width:1080px;margin:24px auto 48px;padding:0 20px}
+.bar{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--line);gap:12px;flex-wrap:wrap}
+[role=tablist]{display:flex;gap:6px}
+[role=tab]{font:inherit;font-size:18px;background:none;border:0;padding:12px 18px;color:var(--mute);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}
+[role=tab][aria-selected=true]{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+.meta{font-size:13px;color:var(--mute);padding-bottom:10px;display:flex;gap:14px;align-items:center}
+.meta button{font:inherit;font-size:13px;background:var(--chip);color:var(--ink);border:0;border-radius:8px;padding:6px 10px;cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-top:18px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:720px}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:14px;color:var(--mute);font-weight:600}
+th button{font:inherit;color:inherit;font-weight:inherit;background:none;border:0;padding:0;cursor:pointer}
+th button::after{content:" \2195";opacity:.5}
+tr:last-child td{border-bottom:0}
+.site{display:flex;align-items:center;gap:10px;font-weight:600}
+.dot{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#fff;font-size:13px;font-weight:700}
+.tag{font-size:13px;background:var(--chip);border-radius:6px;padding:3px 8px}
+.up{color:var(--up)}.down{color:var(--down)}.flat{color:var(--mute)}
+.note{font-size:13px;color:var(--mute);margin-top:14px}
+.empty{padding:28px;text-align:center;color:var(--mute)}
+a, a:visited{color:#0a95e6 !important;text-decoration:none !important}
+a:hover{text-decoration:underline !important}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<div class="crumb">Home &rsaquo; Top Sites</div>
+<h1>Top Sites Ranking</h1>
+<p>Here are some of the most used IT related stuff.</p>
+</div></header>
+
+<div class="filters">
+<select id="cat" aria-label="Category"><option value="all">All categories</option></select>
+<select id="reg" aria-label="Region"><option value="all">Worldwide</option><option>Asia</option><option>Europe</option><option>Americas</option></select>
+<button class="go" id="go" type="button">Go</button>
+</div>
+
+<main>
+<div class="bar">
+<div role="tablist" aria-label="Views">
+<button role="tab" id="t-rank" aria-selected="true" aria-controls="p-rank">Ranking</button>
+<button role="tab" id="t-trend" aria-selected="false" aria-controls="p-trend" tabindex="-1">Trending</button>
+<button role="tab" id="t-compare" aria-selected="false" aria-controls="p-compare" tabindex="-1">Compare</button>
+</div>
+<div class="meta"><span>Last updated: October 1, 2026</span><button id="csv" type="button">Download CSV</button></div>
+</div>
+
+<section class="card" id="p-rank" role="tabpanel" aria-labelledby="t-rank">
+<table><thead><tr>
+<th><button data-k="rank">Rank</button></th><th>Site</th><th>Category</th>
+<th><button data-k="chg">Rank change</button></th><th><button data-k="dur">Avg. visit</button></th>
+<th><button data-k="pages">Pages / visit</button></th><th><button data-k="bounce">Bounce rate</button></th>
+</tr></thead><tbody id="rank-body"></tbody></table>
+<div class="empty" id="rank-empty" hidden>No sites match these filters.</div>
+</section>
+
+<section class="card" id="p-trend" role="tabpanel" aria-labelledby="t-trend" hidden>
+<table><thead><tr><th>Site</th><th>Category</th><th>Visits last month</th><th>Growth</th></tr></thead><tbody id="trend-body"></tbody></table>
+<div class="empty" id="trend-empty" hidden>No sites match these filters.</div>
+</section>
+
+<section class="card" id="p-compare" role="tabpanel" aria-labelledby="t-compare" hidden>
+<table><thead><tr><th>Category</th><th>Sites</th><th>Avg. bounce rate</th><th>Avg. visit</th></tr></thead><tbody id="cmp-body"></tbody></table>
+</section>
+
+<p class="note">Tip: click a column title to sort. Filters apply to every tab. Use arrow keys to move between tabs.</p>
+</main>
+
+<script>
+const DATA=[
+    //ENTERTAINMENT
+{n:"Cool Math Games",c:"Entertainment",url:"https://www.coolmathgames.com/",r:["Asia","Europe","Americas"],chg:0,dur:600,pages:8.7,bounce:28.4,v:92.1,g:1.2,col:"#2f6fdb"},
+{n:"ASCII Flow",c:"Entertainment",url:"https://asciiflow.com/#/",r:["Americas","Europe"],chg:0,dur:1130,pages:11.5,bounce:23.6,v:71.4,g:3.8,col:"#c0392b"},
+{n:"Auto Draw",c:"Entertainment",url:"https://www.autodraw.com/",r:["Asia","Americas"],chg:1,dur:615,pages:12.4,bounce:30.1,v:54.2,g:-0.9,col:"#3b5ccc"},
+{n:"Bored Button",c:"Entertainment",url:"https://www.boredbutton.com/",r:["Europe","Americas"],chg:-1,dur:518,pages:12.5,bounce:33.4,v:49.8,g:2.1,col:"#b5368a"},
+{n:"Calculator Soup",c:"Entertainment",url:"https://www.calculatorsoup.com/",r:["Asia","Europe","Americas"],chg:2,dur:403,pages:4.8,bounce:24.9,v:46.3,g:14.6,col:"#1a8a6e"},
+
+
+{n:"shortposts.example",c:"Social",r:["Americas"],chg:0,dur:805,pages:14.9,bounce:31.4,v:38.7,g:-2.4,col:"#333"},
+{n:"bazaar.example",c:"Shopping",r:["Asia","Europe"],chg:-1,dur:540,pages:9.2,bounce:34.0,v:35.5,g:5.3,col:"#d9822b"},
+{n:"newsdesk.example",c:"News",r:["Europe","Americas"],chg:1,dur:310,pages:3.1,bounce:52.7,v:29.0,g:-4.1,col:"#6b4c9a"},
+{n:"learnly.example",c:"Education",r:["Asia","Europe"],chg:3,dur:720,pages:6.4,bounce:38.2,v:24.6,g:9.7,col:"#0e7c7b"},
+{n:"mapquest.example",c:"Travel",r:["Europe","Asia","Americas"],chg:0,dur:285,pages:2.9,bounce:48.3,v:21.2,g:1.6,col:"#4a8f3c"}
+
+
+].map((d,i)=>({...d,rank:i+1}));
+const $=s=>document.querySelector(s);
+const fmt=s=>String(Math.floor(s/3600)).padStart(2,"0")+":"+String(Math.floor(s%3600/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+[...new Set(DATA.map(d=>d.c))].sort().forEach(c=>$("#cat").add(new Option(c,c)));
+let f={cat:"all",reg:"all"},sort={k:"rank",dir:1};
+const rows=()=>DATA.filter(d=>(f.cat==="all"||d.c===f.cat)&&(f.reg==="all"||d.r.includes(f.reg)));
+const siteCell=d=>`<div class="site"><span class="dot" style="background:${d.col}">${d.n[0].toUpperCase()}</span><a href="${d.url||'#'}" target="_blank" rel="noopener">${d.n}</a></div>`;
+function render(){
+ const list=rows().sort((a,b)=>(a[sort.k]-b[sort.k])*sort.dir);
+ $("#rank-body").innerHTML=list.map(d=>`<tr><td>${d.rank}</td><td>${siteCell(d)}</td><td><span class="tag">${d.c}</span></td>
+ <td class="${d.chg>0?"up":d.chg<0?"down":"flat"}">${d.chg>0?"&#9650; "+d.chg:d.chg<0?"&#9660; "+-d.chg:"="}</td>
+ <td>${fmt(d.dur)}</td><td>${d.pages.toFixed(2)}</td><td>${d.bounce.toFixed(2)}%</td></tr>`).join("");
+ $("#rank-empty").hidden=list.length>0;
+ const tr=rows().sort((a,b)=>b.g-a.g);
+ $("#trend-body").innerHTML=tr.map(d=>`<tr><td>${siteCell(d)}</td><td><span class="tag">${d.c}</span></td><td>${d.v.toFixed(1)}M</td>
+ <td class="${d.g>=0?"up":"down"}">${d.g>=0?"+":""}${d.g.toFixed(1)}%</td></tr>`).join("");
+ $("#trend-empty").hidden=tr.length>0;
+ const g={};rows().forEach(d=>(g[d.c]??=[]).push(d));
+ $("#cmp-body").innerHTML=Object.entries(g).map(([c,a])=>`<tr><td><span class="tag">${c}</span></td><td>${a.length}</td>
+ <td>${(a.reduce((s,d)=>s+d.bounce,0)/a.length).toFixed(1)}%</td><td>${fmt(Math.round(a.reduce((s,d)=>s+d.dur,0)/a.length))}</td></tr>`).join("")||`<tr><td colspan="4" class="empty">No sites match these filters.</td></tr>`;
+}
+$("#go").onclick=()=>{f={cat:$("#cat").value,reg:$("#reg").value};render()};
+document.querySelectorAll("th button").forEach(b=>b.onclick=()=>{const k=b.dataset.k;sort={k,dir:sort.k===k?-sort.dir:1};render()});
+const tabs=[...document.querySelectorAll("[role=tab]")];
+function show(t){tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute("aria-controls")).hidden=!on});t.focus();
+ try{history.replaceState(null,"","#"+t.id.slice(2))}catch(e){}}
+tabs.forEach((t,i)=>{t.onclick=()=>show(t);t.onkeydown=e=>{if(e.key==="ArrowRight")show(tabs[(i+1)%tabs.length]);if(e.key==="ArrowLeft")show(tabs[(i+tabs.length-1)%tabs.length])}});
+$("#csv").onclick=()=>{const h="rank,site,category,rank_change,avg_visit,pages_per_visit,bounce_rate\n";
+ const b=h+rows().map(d=>[d.rank,d.n,d.c,d.chg,fmt(d.dur),d.pages,d.bounce].join(",")).join("\n");
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([b],{type:"text/csv"}));a.download="top-sites.csv";a.click()};
+render();
+const h=location.hash.slice(1),start=tabs.find(t=>t.id==="t-"+h);if(start&&h!=="rank"){tabs.forEach(x=>{const on=x===start;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute("aria-controls")).hidden=!on})}
+</script>
+</body>
+</html>
