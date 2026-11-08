@@ -1,0 +1,202 @@
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel='stylesheet' href='borders.css'>
+          <title>Document</title>
+      </head>
+
+      <!-- design -->
+      <body style="background-color: hsla(197, 74%, 42%, 0.829);"></body>
+      <body>
+    
+
+
+
+          
+          <!-- HEADERS -->
+  <div class="top_border">
+      <p class = "The_boys"> The Boys </p>
+    <h1 class="HEADER">  SITES  </h1>
+
+  </div>
+
+
+
+  <!-- CATTEGORIES -->
+
+
+  <div class="filters">
+    <select id="cat">
+      <option value="all">All categories</option>
+      <option>Entertainment</option>
+      <option>Education</option>
+      <option>Shopping</option>
+    </select>
+
+    
+    <select id="reg">
+    <option Value="all"> World wide</option>
+    <option> Asia </option>
+    <option> Europe </option>
+    <option> Americas </option>
+  </select>
+
+
+  </div>
+
+
+
+
+  <div class="content">
+    <div class="tabs">
+      <button class="tab active" data-tab="rank">Ranking</button>
+      <button class="tab" data-tab="trend">Trending</button>
+      <button class="tab" data-tab="compare">Compare</button>
+    </div>
+
+    <div class="panel" id="rank">
+      <table>
+        <thead><tr><th>Rank</th><th>Site</th><th>Category</th><th>Avg. visit</th><th>Bounce rate</th></tr></thead>
+        <tbody id="rank-body"></tbody>
+      </table>
+    </div>
+
+    <div class="panel" id="trend" hidden>
+      <table>
+        <thead><tr><th>Site</th><th>Category</th><th>Growth</th></tr></thead>
+        <tbody id="trend-body"></tbody>
+      </table>
+    </div>
+
+    <div class="panel" id="compare" hidden>
+      <table>
+        <thead><tr><th>Category</th><th>Sites</th><th>Avg. bounce rate</th></tr></thead>
+        <tbody id="compare-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  <!-- SITES -->
+
+  <!-- //n:"Cool Math Games",  c:"Entertainment",url:"https://www.coolmathgames.com/",
+              //Cool math games = sya yung name ng website 
+              //c:"Entertainment" sya category name 
+              //url:"https://www.coolmathgames.com/", link ng website nayon para napipindot  -->
+            
+
+  <script>
+  const SITES = [
+
+  // ENTERTAINMENT SITES
+         
+         // 1 - CATEGORY NAME
+
+
+    {name:"Cool Math Games", cat:"Entertainment", reg:["Asia","Europe","Americas"], url:"https://www.coolmathgames.com/", visit:"00:10:00", bounce:28.4, growth:1.2},
+    {name:"Bored Button",    cat:"Entertainment", reg:["Europe","Americas"],        url:"https://www.boredbutton.com/",  visit:"00:18:50", bounce:23.6, growth:3.8},
+    {name:"Auto Draw",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.autodraw.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    {name:"ASCII Flow",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://asciiflow.com/#/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    {name:"Calculator Soup",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.calculatorsoup.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    
+    // LAGAY PA KAYO NG MGA WEBSITE DITO NA RELATED SA IT
+    // PALITAN NYO LANG YUNG NAME, URL, AT CAT (CATEGORIES) NILA 
+      // PAG KA TAPOS NYO PALITAN TANGALIN NYO YUNG // SA UNAHAN
+  
+
+      // 2 - CATEGORY NAME
+
+
+    // {name:"Cool Math Games", cat:"Entertainment", reg:["Asia","Europe","Americas"], url:"https://www.coolmathgames.com/", visit:"00:10:00", bounce:28.4, growth:1.2},
+    // {name:"Bored Button",    cat:"Entertainment", reg:["Europe","Americas"],        url:"https://www.boredbutton.com/",  visit:"00:18:50", bounce:23.6, growth:3.8},
+    // {name:"Auto Draw",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.autodraw.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    // {name:"ASCII Flow",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://asciiflow.com/#/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    // {name:"Calculator Soup",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.calculatorsoup.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},  
+      
+      //3 - CATEGORY NAME
+      
+    // {name:"Cool Math Games", cat:"Entertainment", reg:["Asia","Europe","Americas"], url:"https://www.coolmathgames.com/", visit:"00:10:00", bounce:28.4, growth:1.2},
+    // {name:"Bored Button",    cat:"Entertainment", reg:["Europe","Americas"],        url:"https://www.boredbutton.com/",  visit:"00:18:50", bounce:23.6, growth:3.8},
+    // {name:"Auto Draw",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.autodraw.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    // {name:"ASCII Flow",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://asciiflow.com/#/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    // {name:"Calculator Soup",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.calculatorsoup.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},  
+         
+    //4 CATEGORY NAME
+
+    // {name:"Cool Math Games", cat:"Entertainment", reg:["Asia","Europe","Americas"], url:"https://www.coolmathgames.com/", visit:"00:10:00", bounce:28.4, growth:1.2},
+    // {name:"Bored Button",    cat:"Entertainment", reg:["Europe","Americas"],        url:"https://www.boredbutton.com/",  visit:"00:18:50", bounce:23.6, growth:3.8},
+    // {name:"Auto Draw",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.autodraw.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    // {name:"ASCII Flow",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://asciiflow.com/#/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    // {name:"Calculator Soup",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.calculatorsoup.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},  
+
+  //5 CATEGORY NAME
+
+    // {name:"Cool Math Games", cat:"Entertainment", reg:["Asia","Europe","Americas"], url:"https://www.coolmathgames.com/", visit:"00:10:00", bounce:28.4, growth:1.2},
+    // {name:"Bored Button",    cat:"Entertainment", reg:["Europe","Americas"],        url:"https://www.boredbutton.com/",  visit:"00:18:50", bounce:23.6, growth:3.8},
+    // {name:"Auto Draw",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.autodraw.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    // {name:"ASCII Flow",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://asciiflow.com/#/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    // {name:"Calculator Soup",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.calculatorsoup.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},  
+
+
+  ];
+
+
+
+
+
+
+
+
+
+
+  // FUNCTIONS / MAKES IT WRK
+
+  const $ = id => document.getElementById(id);
+
+  function filtered() {
+    const cat = $("cat").value, reg = $("reg").value;
+    return SITES.filter(s => (cat === "all" || s.cat === cat) && (reg === "all" || s.reg.includes(reg)));
+  }
+
+  const link = s => `<a href="${s.url}" target="_blank" rel="noopener">${s.name}</a>`;
+
+  function render() {
+    const list = filtered();
+
+    $("rank-body").innerHTML = list.map((s, i) =>
+      `<tr><td>${i + 1}</td><td>${link(s)}</td><td>${s.cat}</td><td>${s.visit}</td><td>${s.bounce.toFixed(1)}%</td></tr>`
+    ).join("") || `<tr><td colspan="5">No sites match these filters.</td></tr>`;
+
+    $("trend-body").innerHTML = [...list].sort((a, b) => b.growth - a.growth).map(s =>
+      `<tr><td>${link(s)}</td><td>${s.cat}</td><td>${s.growth >= 0 ? "+" : ""}${s.growth.toFixed(1)}%</td></tr>`
+    ).join("") || `<tr><td colspan="3">No sites match these filters.</td></tr>`;
+
+    const groups = {};
+    list.forEach(s => (groups[s.cat] = groups[s.cat] || []).push(s));
+    $("compare-body").innerHTML = Object.entries(groups).map(([cat, arr]) =>
+      `<tr><td>${cat}</td><td>${arr.length}</td><td>${(arr.reduce((t, s) => t + s.bounce, 0) / arr.length).toFixed(1)}%</td></tr>`
+    ).join("") || `<tr><td colspan="3">No sites match these filters.</td></tr>`;
+  }
+
+  document.querySelectorAll(".tab").forEach(tab => {
+    tab.onclick = () => {
+      document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+      document.querySelectorAll(".panel").forEach(p => p.hidden = true);
+      tab.classList.add("active");
+      $(tab.dataset.tab).hidden = false;
+    };
+  });
+
+  $("cat").onchange = render;
+  $("reg").onchange = render;
+  render();
+  </script>
+
+  
+      
+
+      </body>
+      </html>
