@@ -31,8 +31,9 @@
     <select id="cat">
       <option value="all">All categories</option>
       <option>Entertainment</option>
-      <option>Education</option>
-      <option>Shopping</option>
+      <option>IT Learning & Education</option>
+      <option>Technology News & Information</option>
+      <option>Programming & Development</option>
     </select>
 
     
@@ -93,52 +94,52 @@
 
   // ENTERTAINMENT SITES
          
-         // 1 - CATEGORY NAME
+         // 1 - PROGRAMMING & DEVELOPMENT
 
 
-    {name:"Cool Math Games", cat:"Entertainment", reg:["Asia","Europe","Americas"], url:"https://www.coolmathgames.com/", visit:"00:10:00", bounce:28.4, growth:1.2},
-    {name:"Bored Button",    cat:"Entertainment", reg:["Europe","Americas"],        url:"https://www.boredbutton.com/",  visit:"00:18:50", bounce:23.6, growth:3.8},
-    {name:"Auto Draw",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.autodraw.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
-    {name:"ASCII Flow",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://asciiflow.com/#/",           visit:"00:12:00", bounce:38.2, growth:9.7},
-    {name:"Calculator Soup",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.calculatorsoup.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    {name:"W3Schools", cat:"Programming & Development", reg:["Asia","Europe"], url:"https://www.w3schools.com/⁠", visit:"00:10:00", bounce:28.4, growth:1.2},
+    {name:"MDN Web Docs",    cat:"Programming & Development", reg:["Europe","Americas","Americas"],        url:"https://developer.mozilla.org/⁠",  visit:"00:18:50", bounce:23.6, growth:3.8},
+    {name:"freeCodeCamp",         cat:"Programming & Development",     reg:["Asia","Americas"],            url:"https://www.freecodecamp.org/⁠",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    {name:"GeeksforGeeks",         cat:"Programming & Development",     reg:["Asia","Europe"],            url:"https://www.geeksforgeeks.org/⁠",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    {name:"GitHub",         cat:"Programming & Development",     reg:["Asia","Europe","Americas"],            url:"https://github.com/⁠",           visit:"00:12:00", bounce:38.2, growth:9.7},
     
     // LAGAY PA KAYO NG MGA WEBSITE DITO NA RELATED SA IT
     // PALITAN NYO LANG YUNG NAME, URL, AT CAT (CATEGORIES) NILA 
       // PAG KA TAPOS NYO PALITAN TANGALIN NYO YUNG // SA UNAHAN
   
 
-      // 2 - CATEGORY NAME
+      // 2 - CYBERSECURITY
 
 
-    // {name:"Cool Math Games", cat:"Entertainment", reg:["Asia","Europe","Americas"], url:"https://www.coolmathgames.com/", visit:"00:10:00", bounce:28.4, growth:1.2},
-    // {name:"Bored Button",    cat:"Entertainment", reg:["Europe","Americas"],        url:"https://www.boredbutton.com/",  visit:"00:18:50", bounce:23.6, growth:3.8},
-    // {name:"Auto Draw",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.autodraw.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
-    // {name:"ASCII Flow",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://asciiflow.com/#/",           visit:"00:12:00", bounce:38.2, growth:9.7},
-    // {name:"Calculator Soup",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.calculatorsoup.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},  
+    {name:"Kaspersky", cat:"Cybersecurity", reg:["Asia","Europe"], url:"https://www.kaspersky.com/⁠", visit:"00:10:00", bounce:28.4, growth:1.2},
+    {name:"Norton",    cat:"Cybersecurity", reg:["Asia","Americas"],        url:"https://www.norton.com/⁠",  visit:"00:18:50", bounce:23.6, growth:3.8},
+    {name:"Cloudflare",         cat:"Cybersecurity",     reg:["Asia","Europe","Americas"],            url:"https://www.cloudflare.com/⁠",           visit:"00:12:00", bounce:38.2, growth:9.7},
+     {name:"OWASP",         cat:"Cybersecurity",     reg:["Americas","Europe"],            url:"https://owasp.org/⁠",           visit:"00:12:00", bounce:38.2, growth:9.7},
+     {name:"CISA",         cat:"Cybersecurity",     reg:["Americas"],            url:"https://www.cisa.gov/⁠",           visit:"00:12:00", bounce:38.2, growth:9.7},  
       
-      //3 - CATEGORY NAME
+      //3 - IT LEARNING & EDUCATION
       
-    // {name:"Cool Math Games", cat:"Entertainment", reg:["Asia","Europe","Americas"], url:"https://www.coolmathgames.com/", visit:"00:10:00", bounce:28.4, growth:1.2},
-    // {name:"Bored Button",    cat:"Entertainment", reg:["Europe","Americas"],        url:"https://www.boredbutton.com/",  visit:"00:18:50", bounce:23.6, growth:3.8},
-    // {name:"Auto Draw",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.autodraw.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
-    // {name:"ASCII Flow",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://asciiflow.com/#/",           visit:"00:12:00", bounce:38.2, growth:9.7},
-    // {name:"Calculator Soup",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.calculatorsoup.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},  
+     {name:"Coursera", cat:"IT Learning & Education", reg:["Asia","Europe","Americas"], url:"https://www.coursera.org/⁠", visit:"00:10:00", bounce:28.4, growth:1.2},
+     {name:"edX",    cat:"IT Learning & Education", reg:["Asia","Europe","Americas"],        url:"https://www.edx.org/⁠",  visit:"00:18:50", bounce:23.6, growth:3.8},
+     {name:"Codecademy",         cat:"IT Learning & Education",     reg:["Asia","Americas"],            url:"https://www.codecademy.com/⁠",           visit:"00:12:00", bounce:38.2, growth:9.7},
+     {name:"Cisco Networking Academy",         cat:"IT Learning & Education",     reg:["Asia","Europe"],            url:"https://www.netacad.com/⁠",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    {name:"Microsoft Learn",         cat:"IT Learning & Education",     reg:["Asia","Europe","Americas"],            url:"https://learn.microsoft.com/⁠",           visit:"00:12:00", bounce:38.2, growth:9.7},  
          
-    //4 CATEGORY NAME
+    //4 - TECHNOLOGY NEWS & INFORMATION
 
-    // {name:"Cool Math Games", cat:"Entertainment", reg:["Asia","Europe","Americas"], url:"https://www.coolmathgames.com/", visit:"00:10:00", bounce:28.4, growth:1.2},
-    // {name:"Bored Button",    cat:"Entertainment", reg:["Europe","Americas"],        url:"https://www.boredbutton.com/",  visit:"00:18:50", bounce:23.6, growth:3.8},
-    // {name:"Auto Draw",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.autodraw.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
-    // {name:"ASCII Flow",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://asciiflow.com/#/",           visit:"00:12:00", bounce:38.2, growth:9.7},
-    // {name:"Calculator Soup",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.calculatorsoup.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},  
+     {name:"TechCrunch", cat:"Technology News & Information", reg:["Europe","Americas"], url:"https://techcrunch.com/⁠", visit:"00:10:00", bounce:28.4, growth:1.2},
+     {name:"The Verge",    cat:"Technology News & Information", reg:["Europe","Americas"],        url:"https://www.theverge.com/⁠",  visit:"00:18:50", bounce:23.6, growth:3.8},
+     {name:"WIRED",         cat:"Technology News & Information",     reg:["Asia","Europe","Americas"],            url:"https://www.wired.com/⁠",           visit:"00:12:00", bounce:38.2, growth:9.7},
+     {name:"CNET",         cat:"Technology News & Information",     reg:["Asia","Americas"],            url:"https://www.cnet.com/⁠",           visit:"00:12:00", bounce:38.2, growth:9.7},
+     {name:"Ars Technica",         cat:"Technology News & Information",     reg:["Americas","Europe"],            url:"https://arstechnica.com/⁠",           visit:"00:12:00", bounce:38.2, growth:9.7},  
 
   //5 CATEGORY NAME
 
-    // {name:"Cool Math Games", cat:"Entertainment", reg:["Asia","Europe","Americas"], url:"https://www.coolmathgames.com/", visit:"00:10:00", bounce:28.4, growth:1.2},
-    // {name:"Bored Button",    cat:"Entertainment", reg:["Europe","Americas"],        url:"https://www.boredbutton.com/",  visit:"00:18:50", bounce:23.6, growth:3.8},
-    // {name:"Auto Draw",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.autodraw.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
-    // {name:"ASCII Flow",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://asciiflow.com/#/",           visit:"00:12:00", bounce:38.2, growth:9.7},
-    // {name:"Calculator Soup",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.calculatorsoup.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},  
+     {name:"Cool Math Games", cat:"Entertainment", reg:["Asia","Europe","Americas"], url:"https://www.coolmathgames.com/", visit:"00:10:00", bounce:28.4, growth:1.2},
+     {name:"Bored Button",    cat:"Entertainment", reg:["Europe","Americas"],        url:"https://www.boredbutton.com/",  visit:"00:18:50", bounce:23.6, growth:3.8},
+    {name:"Auto Draw",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.autodraw.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+     {name:"ASCII Flow",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://asciiflow.com/#/",           visit:"00:12:00", bounce:38.2, growth:9.7},
+    {name:"Calculator Soup",         cat:"Entertainment",     reg:["Asia","Europe"],            url:"https://www.calculatorsoup.com/",           visit:"00:12:00", bounce:38.2, growth:9.7},  
 
 
   ];
